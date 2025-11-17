@@ -35,12 +35,32 @@ You can start using the deployed bot immediately:
 - Optional Google Sheets integration
 - Hosted on Render (24/7 deployment)
 
-## 📦 Installation (Optional)
+## 📦 Installation (For Custom Setup)
 
-If you want to run the bot yourself:
+If you want to run your own version of TripWise Bot:
 
-```bash
-git clone https://github.com/your-username/tripwise-bot.git
-cd tripwise-bot
-pip install -r requirements.txt
-python bot.py
+### 1. Create a Telegram Bot via BotFather
+- Open Telegram and search for `BotFather`
+- Run the command: `/newbot`
+- Give it a name and username (e.g., `TripWiseBot`)
+- Copy the token shown (⚠️ **keep it private**)
+
+> Example Token: `123456789:ABCDefghIJKlmnopQRstUvWxyz0123456`
+
+---
+
+### 2. Disable Privacy Mode
+For the bot to read messages in the group (like `#r100 Dinner`), you **must disable privacy mode**:
+
+- In BotFather, type: `/mybots`
+- Select your bot → `Bot Settings` → `Group Privacy` → `Turn off`
+  
+Privacy OFF means your bot can read all messages in a group — required for expense triggers.
+
+---
+
+### 3. Update Access Token in Code
+Replace the token in your `bot.py` file:
+
+```python
+BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"
