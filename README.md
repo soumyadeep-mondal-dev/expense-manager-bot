@@ -1,3 +1,46 @@
-python-telegram-bot==21.3
-gspread==6.1.2
-google-auth==2.29.0
+# TripWise Bot 🤖💸
+
+A Telegram bot that simplifies expense tracking and splitting during trips or group activities. The bot automates expense logging, fair splitting, settlement reminders, and can optionally sync with Google Sheets — all through chat commands in your group.
+
+## 🚀 Live Bot Available!
+
+You can start using the deployed bot immediately:
+
+🔍 Search on Telegram: **`deep_split_bot`**  
+(This bot is already deployed and configured to handle trips in real-time.)
+
+## 🪄 Features
+
+- **Chat-based expense entry** using `#r<amount> <description>`
+- **Beneficiary selection** via inline buttons
+- **UPI payment buttons** for easy settlement
+- **Google Sheets sync** for record keeping (optional)
+- **Personalized commands** like `/summary`, `/myexpenses`, `/notify`
+- **Admin control**: `/lockbot`, `/resettrip`, `/setmembers` and more
+
+## 🔧 Commands Overview
+
+- `#r100 Dinner`  → Log an expense
+- `/setmembers Alice,Bob`  → Set group members
+- `/setupupi Bob bob@upi`  → Add UPI for settlement
+- `/summary` → Shows who owes whom
+- `/myexpenses` → Shows your share and balance
+- `/notify` → Sends private reminders to debtors
+
+## 🛠️ Tech Stack
+
+- Python
+- python-telegram-bot
+- UPI deep link support
+- Optional Google Sheets integration
+- Hosted on Render (24/7 deployment)
+
+## 📦 Installation (Optional)
+
+If you want to run the bot yourself:
+
+```bash
+git clone https://github.com/your-username/tripwise-bot.git
+cd tripwise-bot
+pip install -r requirements.txt
+python bot.py
