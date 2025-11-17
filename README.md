@@ -6,7 +6,7 @@ A Telegram bot that simplifies expense tracking and splitting during trips or gr
 
 You can start using the deployed bot immediately:
 
-🔍 Search on Telegram: **`deep_split_bot`**  
+🔍 Search on Telegram: **`tripwise_split_bot`** 
 (This bot is already deployed and configured to handle trips in real-time.)
 
 ## 🪄 Features
